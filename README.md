@@ -1,28 +1,53 @@
 # Flight-Operation-App
-You are a flight operations manager in a flight company and there are N cities and M
-undirected flight routes you need to organize in the country. Each city has an airport and each
-airport can work as layover. The airport will be in two states, loading and running. In loading state,
-luggage is loaded into the planes. In the running state, planes will leave the airport for the next
-city. All the airports will switch their states from loading to running and vice versa after every T
-minutes. At an airport, if its state is loading, you have to wait for it to switch its state to running.
-At the beginning, all the airports are in running state. The time taken to travel through any flight
-route is C minutes. Find the lexicographically smallest path which will take the minimum amount
-of time (in minutes) required to move from city X to city Y.
-In the input, the first line contains 4 space separated integers, N, M, T and C. N denotes the
-number of cities we have, M denotes the number of connections between the N cities, T denotes
-the time required by airports to change their states and C denotes that the time for travelling one
-city to another. Next M lines contains two space separated integers each, U and V denoting that
-there is a bidirectional road between city U and city V. Next line contains two space separated
-integers, X the city we start to travel and Y the city we want to reach at the end.
+# Lexicographically Smallest Path Finder
 
-In the first line it is given that we have 5 cities and 5 bidirectional roads between them. For
-this case, time required the airports to change their state is 3 minutes and travel through any flight
-route is 5 minutes. The next lines gives the connections between the cities and the last line gives
-which city is the starting point and which city is the end point for this case.
+This Java project is a flight operations manager tool for organizing flights between N cities in a country. The tool calculates the lexicographically smallest path that minimizes the travel time from one city (X) to another city (Y), taking into account airport state changes and flight durations.
 
-In the output, the first line print an integer K, denoting the number of city you need to go
-through to reach city Y from the city X. In next line, print K space separated integers denoting the
-path which will take the minimum amount of time (in minutes) required by to move from city X
-to city Y. In the last line, print the total time through the path from city X to city Y. There can be
-multiple paths. Print the lexicographically smallest one and then the total time for each path at the
-end.
+## Introduction
+
+As a flight operations manager, you need to efficiently plan flight routes between N cities using M undirected flight routes. Each city has an airport that alternates between loading and running states every T minutes. The travel time through any flight route is C minutes. Your goal is to find the lexicographically smallest path that minimizes the total travel time from city X to city Y.
+
+## Features
+
+- Calculation of the lexicographically smallest path.
+- Optimization of travel time by considering airport state changes.
+- Support for multiple paths with their respective travel times.
+- Clear and extensible Java codebase.
+
+## Getting Started
+
+1. Clone this repository to your local machine.
+
+2. Compile and run the Java program using your preferred Java development environment.
+
+3. Follow the prompts to input the necessary parameters and calculate the lexicographically smallest path and total travel time.
+
+## Usage
+
+To use the Lexicographically Smallest Path Finder, follow these steps:
+
+1. Run the Java program.
+
+2. Provide input parameters such as the number of cities (N), number of flight connections (M), airport state change time (T), travel time between cities (C), flight routes, starting city (X), and destination city (Y).
+
+3. The program will calculate and display the lexicographically smallest path, the total travel time, and all available paths.
+
+## Input Format
+
+In the input, the first line contains four space-separated integers: N (number of cities), M (number of flight connections), T (airport state change time), and C (travel time between cities).
+
+Next, M lines contain two space-separated integers each: U and V, indicating bidirectional roads between cities U and V.
+
+Finally, the last line contains two space-separated integers: X (starting city) and Y (destination city).
+
+## Output Format
+
+The output includes the following:
+
+1. The number of cities (K) you need to go through to reach city Y from city X.
+
+2. K space-separated integers denoting the path that minimizes the total travel time.
+
+3. The total time (in minutes) for the path from city X to city Y.
+
+The program will also display multiple paths (if available) and their respective total travel times.
